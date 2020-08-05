@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "373d5533-dc5c-41ae-9ba7-c3c7cb9b86c0",
+		"name": "NLW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "02",
+			"item": [
+				{
+					"name": "Connections",
+					"item": [
+						{
+							"name": "Create connections",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3333/connections",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"connections"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List total connections",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/connections",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"connections"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Classes",
+					"item": [
+						{
+							"name": "Create class",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Adeilson Silva\",\n    \"avatar\": \"https://avatars0.githubusercontent.com/u/19808865?s=460&u=5c8a77ba66a86ca46143944e3bf17fc05014a2d2&v=4\",\n    \"whatsapp\": \"19991076133\",\n    \"bio\": \"Bio test\",\n    \"subject\": \"Matemática\",\n    \"cost\": 80,\n    \"schedule\": [\n        {\n            \"week_day\": 1,\n            \"from\": \"8:00\",\n            \"to\": \"12:00\"\n        },\n        {\n            \"week_day\": 3,\n            \"from\": \"10:00\",\n            \"to\": \"18:00\"\n        },\n        {\n            \"week_day\": 4,\n            \"from\": \"8:00\",\n            \"to\": \"12:00\"\n        }\n    ]\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3333/classes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"classes"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List classes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3333/classes?week_day=1&subject=Matemática&time=11:00",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3333",
+									"path": [
+										"classes"
+									],
+									"query": [
+										{
+											"key": "week_day",
+											"value": "1"
+										},
+										{
+											"key": "subject",
+											"value": "Matemática"
+										},
+										{
+											"key": "time",
+											"value": "11:00"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
